@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>下拉列表</title>
+<style type="text/css">
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+body{font:16px/32px "微软雅黑";background: #333;}	
+#box{width: 500px;height: 326px;
+	 border: 3px solid #000;background: #fff;
+	 position: absolute;left: 50%;top:50%;margin: -163px 0 0 -250px;}
+.province{width: 320px;height: 42px;background: #C00;
+		  margin: 80px auto;position: relative;}
+.province strong{width: 64px;height: 42px;line-height: 42px;
+				 display:block;float: left;
+				 color: #fff;padding-left: 15px;}
+#selectProvince{width: 200px;height: 28px;line-height: 28px;
+				display:block;float: left;
+				background: #fff url(image/ab.png) no-repeat 190px -18px;
+				margin-top: 7px;
+				padding-left: 8px;color: #ccc;
+				cursor: pointer;}
+#allProvince{width: 318px;height: auto;
+			 line-height: 30px;
+			 clear: both;
+			 background: #fff;
+			 border: 1px solid #DFDFDF;
+			 border-top: none;
+			 position: absolute;left:0;top:42px;
+			 display: none;
+			 z-index: 101;}
+#allProvince li{height: 30px;
+				border-bottom: 1px solid #DFDFDF;}
+#allProvince li b{display: inline-block;width: 40px;
+				  text-align: center;}
+#allProvince li span{padding-right: 15px;cursor: pointer;}
+#allProvince li span:hover{color: #C00;}
+#layer{width: 100%;height: 100%;background: #fff;
+	   position: absolute;top:0;left:0;
+	   z-index: 100;filter: alpha(opacity=0);opacity: 0;
+	   display: none;}
+</style>
+<script type="text/javascript" src="jquery/jquery-3.0.0.js"></script>
+<script type="text/javascript" src="jquery/select.js"></script>
+</head>
+<body>
+	<div id="box">
+		<div class="province">
+			<strong>送货至：</strong>
+			<span id="selectProvince">上海</span>
+			<ul id="allProvince">
+				<li><b>A</b><span>安徽</span></li>
+				<li><b>B</b><span>北京</span></li>
+				<li><b>C</b><span>重庆</span></li>
+				<li><b>F</b><span>福建</span></li>
+				<li><b>G</b><span>广东</span><span>广西</span></li>
+				<li><b>H</b><span>湖北</span><span>河北</span><span>黑龙江</span></li>
+				<li><b>J</b><span>吉林</span></li>
+				<li><b>Q</b><span>青海</span></li>
+				<li><b>S</b><span>上海</span></li>
+			</ul>
+		</div>
+	</div>
+	<div id="layer"></div>
+</body>
+</html>
